@@ -9,6 +9,7 @@ class FixtureIntegrityTests(unittest.TestCase):
         self.assertEqual(len(data["meter_revisions"]), 2)
         self.assertEqual({row["district"] for row in data["district_quota"]}, {"D-A", "D-B"})
         self.assertEqual(sum(row["m3"] for row in data["late_allocation"]), 210)
+        self.assertEqual(data["readings"][-1]["value"], data["delivery"][0]["total_m3"])
 
 
 if __name__ == "__main__":
