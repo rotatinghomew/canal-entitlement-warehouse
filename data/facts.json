@@ -1,0 +1,9 @@
+{
+  "meter_revisions": [{"meter":"GATE-1","revision":1,"unit":"m3","direction":"cumulative"},{"meter":"GATE-1","revision":2,"unit":"m3","direction":"cumulative","effective_at":"2026-11-04"}],
+  "readings": [{"id":"R1","meter":"GATE-1","revision":1,"at":"2026-11-03T08:00:00+08:00","value":1000},{"id":"R2","meter":"GATE-1","revision":2,"at":"2026-11-04T08:00:00+08:00","value":150}],
+  "district_quota": [{"district":"D-A","period":"2026-11","quota_m3":500},{"district":"D-B","period":"2026-11","quota_m3":300}],
+  "adjustment": {"from":"D-A","to":"D-B","limit_m3":100,"valid_from":"2026-11-02","valid_to":"2026-11-05","state":"active"},
+  "requests": [{"id":"Q1","holder":"H-A","district":"D-A","m3":200,"state":"reserved"},{"id":"Q2","holder":"H-B","district":"D-B","m3":180,"state":"reserved"}],
+  "delivery": [{"id":"G1","meter":"GATE-1","period":"2026-11-04","total_m3":210,"districts":null,"status":"partially-allocated"}],
+  "late_allocation": [{"delivery":"G1","holder":"H-A","m3":130},{"delivery":"G1","holder":"H-B","m3":80,"received_at":"2026-11-09"}]
+}
